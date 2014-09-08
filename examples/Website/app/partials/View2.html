@@ -1,0 +1,22 @@
+<div class="container" >
+    <div >
+        <h3>Adding a Module and Controller</h3>
+        Name:<br />
+        <input type="text" ng-model="inputData.name" placeholder="name" />
+        <br />
+        City:<br />
+        <input type="text" ng-model="inputData.city" placeholder="city" />
+        <br />
+        <button class="btn btn-primary" ng-click="insertDay()">Add Day</button>
+        <br />
+        <br />
+
+        Filter by Name:
+        <input type="text" ng-model="nameText" />
+        <br />
+        <ul>
+            <li ng-repeat="day in days | filter:nameText | orderBy:'name'">{{ day.name }} - {{ day.city }}</li>
+        </ul>
+    </div>
+</div>
+

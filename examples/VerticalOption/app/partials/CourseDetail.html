@@ -1,0 +1,13 @@
+<h1>Name: {{course.name}}</h1>
+
+<p>{{course.LearningGoal}}</p>
+
+
+<ul class="courseOverview">
+	<li>
+		<dl>
+			<dt>Overview</dt>
+			<dd ng-repeat="overview in course.overview">{{overview}}</dd>
+		</dl>
+	</li>
+</ul>

@@ -1,0 +1,35 @@
+{
+    "name": "Basic Reppeling Course", 
+    "overview": [
+		"1 or 2 day course pending size of classes- (8 or 16 hours)",
+		"Minimum (10) students, Maximum (18) students",
+		"$125.00 per student",
+		"Special Team rates"
+	], 
+	"LearningGoal": "The student will learn the proper rappelling techniques and safely rappel from a safe rappel tower or comparable building.", 
+	"objectivies": {
+		"overview" : "The student will be taught and then individually monitored by a certified rappel master. All students must successfully demonstrate the following:",
+		"studentObjectives" : [
+			"Tie (5) knots (includes: knots, bends & hitches)",
+			"Proper hook up with a carabiner & figure 8",
+			"Demo proper technique while rappelling (both weapon and non-weapon hand)",
+			"Proper tie-off with figure 8",
+			"Proper tie-off with carabiner",
+			"Inverted rappelling",
+			"Proper Window entry",
+			"Proper belay (top and bottom)",
+			"Self belay, lowering and rappelling",
+			"Self rescue",
+			"Lots of rappels"
+		]
+	},
+	"equipment" : [
+		"(2) Kernmantle Ropes",
+		"Rescue Eight Descender",
+		"(2) Carabiners",
+		"Rappel Harness (Manufactured and/or Swiss seat)",
+		"Helmet",
+		"Gloves",
+		"15’ 11mm Rope &amp; 15’ 1” tubular nylon"
+	]	
+}

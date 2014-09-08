@@ -1,0 +1,25 @@
+
+			
+<div id="coursesPage">
+	<div class="mainArea">
+		Search: <input ng-model="query">
+		Sort by:
+		<select ng-model="orderProp">
+		<option value="name">Alphabetical</option>
+		<option value="order">Order</option>
+		</select>
+
+
+		
+		<!--Body content-->
+
+		<ul class="courses">
+		<li ng-repeat="course in courses | filter:query | orderBy:orderProp" class="thumbnail">
+		<a href="#/Courses/{{course.id}}" class="thumb"><img ng-src="{{course.imageUrl}}"></a>
+		<!--<p>{{course.snippet}}</p>-->
+		</li>
+		</ul>
+		
+	</div>
+</div>
+
