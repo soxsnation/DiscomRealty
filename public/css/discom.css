@@ -1,3 +1,21 @@
-body {
+abody {
 	background-color: #828282;
+}
+
+body {
+	background-color: #FFFFFF;
+}
+
+.discomNav {
+	background-color: #828282;
+}
+
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  /* Set the fixed height of the footer here */
+  height: 60px;
+  color: #FFFFFF;
+  background-color: #828282;
 }

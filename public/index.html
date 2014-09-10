@@ -1,64 +1,54 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" data-ng-app="discom">
-<head>
+  <head>
     <!-- Title -->
     <title>Discom Realty</title>
     
-   <!--<link href="css/bootstrap.min.css" rel="stylesheet" >-->
-   <link href="//maxcdn.bootstrapcdn.com/bootswatch/3.2.0/sandstone/bootstrap.min.css" rel="stylesheet" >
-    <link rel="stylesheet" href="./css/discom.css">
-    <script type="text/jscript" src="lib/jquery.min.js"></script>
-
-    <script src="lib/angular.js"></script>
-
-     <script type="text/jscript" src="js/app.js"></script>
-    <script type="text/jscript" src="js/controller.js"></script>
-
-    <script type="text/jscript" src="lib/bootstrap-dropdown.js"></script>
-
-</head>
-<body>
-
-<!--  <div class="navbar navbar-fixed-top">
-  <div class="navbar-inner"><div class="container">
-    <a class="brand" href="/#/Home">Discom Realty</a>
-    <ul class="nav">        
-        <li ><a href="/#/Agents">Agents</a></li>
-        <li ><a href="/#/About">About</a></li>
-        <li ><a href="/#/Contact">Contact</a></li>
-    </ul>
-    <p class="navbar-text pull-right" ui-view="hint"></p>    
-  </div></div>
-</div> -->
-
-<nav class="navbar navbar-default" role="navigation">
-  <div class="container container-fluid">
-    <!-- Brand and toggle get grouped for better mobile display -->
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-        <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-      <a class="navbar-brand" href="/#/Home">Discom Realty</a>
-    </div>
-
-    <!-- Collect the nav links, forms, and other content for toggling -->
-    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-      <ul class="nav navbar-nav">
-        <li class="active"><a href="/#/Agents">Agents</a></li>
-        <li class="active"><a href="/#/Community">Community</a></li>
-        <li class="active"><a href="/#/Contact">Contact</a></li>
-        <li class="active"><a href="/#/About">About</a></li>
-        
-      </ul>   
-    </div><!-- /.navbar-collapse -->
-  </div><!-- /.container-fluid -->
-</nav>
+    <!--<link href="css/bootstrap.min.css" rel="stylesheet" >-->
+    <link href="//maxcdn.bootstrapcdn.com/bootswatch/3.2.0/sandstone/bootstrap.min.css" rel="stylesheet" >
+      <link rel="stylesheet" href="./css/discom.css">
+      <script type="text/jscript" src="lib/jquery.min.js"></script>
+      <script src="lib/angular.js"></script>
+      <script type="text/jscript" src="js/app.js"></script>
+      <script type="text/jscript" src="js/controller.js"></script>
+      <script type="text/jscript" src="lib/bootstrap-dropdown.js"></script>
+    </head>
+    <body>
+      <div class="discomNav">
+        <nav class="navbar navbar-default" role="navigation">
+          <div class="container container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="/#/Home">Discom Realty</a>
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+              <ul class="nav navbar-nav">
+                <li class="active"><a href="/#/Agents">Agents</a></li>
+                <li class="active"><a href="/#/Community">Community</a></li>
+                <li class="active"><a href="/#/Contact">Contact</a></li>
+                <li class="active"><a href="/#/About">About</a></li>
+                
+              </ul>
+              </div><!-- /.navbar-collapse -->
+              </div><!-- /.container-fluid -->
+            </nav>
+          </div>
+          <div class="container" id="main" data-ng-view> </div>
 
 
-    <div class="container" id="main" data-ng-view> </div>
+  <div class="footer">
+  <div class="container">
+   <p> 2014 Discom Realty 2845 Enterprise Road #107A DeBary, Florida 32713 Ph: (386) 668-9128 Fax: (386) 668-5743 Email: dhbroker@aol.com</p>
+  </div>
+  </div>
 
-</body>
-</html>
+
+        </body>
+      </html>

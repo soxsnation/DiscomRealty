@@ -1,4 +1,42 @@
-<h1>Discom Realty</h1>
-<h3>{{currentPage}}</h3>
 <br />
-<p>{{intro}}</p>
+<h3>Discom Realty</h3>
+<div style="display:table">
+	<div style="display:block;float:left;width:65%;">
+		<div data-ng-bind-html-unsafe="intro">
+		</div>
+	</div>
+	<div style="display:block;float:right;width:35%">
+		<div class="panel panel-default">
+			<div class="panel-body">
+				<p>Contacts</p>
+			</div>
+		</div>
+		<div class="panel panel-default">
+			<div class="panel-body">
+			<form data-ng-submit="calculatePayments()">
+				<p>Mortgage Calculator</p>
+				<div style="display:table;">
+					<div style="float:left;margin:10px;">
+						Purchase Price:<br />
+						<input type="text" data-ng-model="price" placeholder="500000"><br />
+						Down Payment:<br />
+						<input type="text" data-ng-model="downPayment" placeholder="$"><br />
+						Interest Rate:<br />
+						<input type="text" data-ng-model="rate" placeholder="%"><br />
+					</div>
+					<div style="float:right;margin:10px;">
+						Loan Amount:<br />
+						<input type="text" data-ng-model="loanAmount" placeholder="450000"><br />
+						Down Payment%:<br />
+						<input type="text" data-ng-model="downPaymentPercent" placeholder="%"><br />
+						Terms:<br />
+						<input type="text" data-ng-model="term" placeholder="30"><br />
+					</div>
+				</div>
+				<input class="btn-primary" type="submit" value="Calculate">
+				<p> Monthly payment: $ {{monthlyPayment}}
+				</form>
+			</div>
+		</div>
+	</div>
+</div>
