@@ -8,11 +8,11 @@
 /* Controllers */
 
 function HomeController($scope, $http) {
-	$scope.monthlyPayment = 0;
-	$scope.rate = 3.95;
-	$scope.term = 30;
-	$scope.price = 450000;
-	$scope.downPayment = 0;
+	// $scope.monthlyPayment = 0;
+	// $scope.rate = 3.95;
+	// $scope.term = 30;
+	// $scope.price = 450000;
+	// $scope.downPayment = 0;
 
 	$scope.calculatePayments = function() {
 		var t = (($scope.rate / 100 / 12) * ($scope.price - $scope.downPayment));

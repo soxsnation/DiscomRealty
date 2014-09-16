@@ -16,6 +16,23 @@ body {
   width: 100%;
   /* Set the fixed height of the footer here */
   height: 60px;
-  color: #FFFFFF;
-  background-color: #828282;
+  color: #FFF;
+  background-color: #67C8CE;
 }
+
+.purple {
+	background-color: #37499F
+}
+
+.blue {
+	background-color: #2C77BB
+}
+
+.aqua {
+	background-color: #67C8CE
+}
+
+.gray {
+  background-color: #6D6E70
+}
+
