@@ -11,3 +11,72 @@
   color: #ffffff;
   background-color: #2C77BB;
 }
+
+/* line 4534 */
+.jumbotronLeft {
+  padding: 30px;
+  margin-bottom: 30px;
+  color: #FFF;
+  background-color: #2C77BB;
+  
+}
+
+.container .jumbotronLeft {
+  border-radius: 6px;
+  width: 70%;
+  height: 635px;
+  display: inline-block;
+  float: left;
+}
+
+.mapView {
+	background-color: #FFF;
+	width: 450px;
+	height: 450px;
+}
+
+.jumbotronRight {
+  padding: 15px 20px;
+  margin-bottom: 30px;
+  color: #FFF;
+  background-color: #67C8CE;
+  
+}
+
+.container .jumbotronRight {
+  border-radius: 6px;
+  width: 28%;
+  height: 635px;
+  display: inline-block;
+  float: right;
+}
+
+.jumbotronRight input {
+	padding: 6px;
+	height: 36px;
+}
+
+.jumbotronRight textarea {
+	padding: 6px;
+}
+
+.jumbotronRight label {
+	font-weight: 500;
+	font-size: 15px;
+}
+
+.jumbotronRightTitle {
+	font-size: 18pt;
+	margin-bottom: 10px;
+}
+
+.jumbotronRightError {
+	color: #F00;
+	font-weight: 500;
+	font-size: 18px;
+}
+
+.jumbotronRight-control {
+	color: #FFF;
+	font-size: 14px;
+}

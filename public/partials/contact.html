@@ -1,18 +1,60 @@
 
-<h3>{{currentPage}}</h3>
-<br /><br /><br />
-<div class="jumbotron">
-	<center>{{address1}}</center>
-	<center>{{address2}}</center>
-	<center>{{phone}}</center>
-	<center>{{fax}}</center>
-	<center>{{email}}</center>
-	<br /><br />
-	
+<div>
+<div class="jumbotronLeft">
+<center>
+<div class="mapView">
 
+</div>
+</center><br />
 
-	
-	
+	<center>{{discomaddress1}}</center>
+	<center>{{discomaddress2}}</center>
+	<center>{{discomphone}}</center>
+	<center>{{discomfax}}</center>
+	<center>{{discomemail}}</center>
+	<br /><br />	
+</div>
+
+<div class="jumbotronRight">
+
+<div class="jumbotronRightTitle">How can we help you?</div>
+
+<form role="form" data-ng-submit="sendEmail()">
+  <div class="form-group">
+    <label for="inputFirstname">Firstname:</label>
+    <input type="text" class="form-control" id="inputFirstname" data-ng-model="firstname">
+  </div>
+  <div class="form-group">
+    <label for="inputLastname">Lastname:</label>
+    <input type="text" class="form-control" id="inputLastname" data-ng-model="lastname">
+  </div>
+  <div class="form-group">
+    <label for="inputEmail">Email address:</label>
+    <input type="email" class="form-control" id="inputEmail" data-ng-model="email">
+  </div>
+  <div class="form-group">
+    <label for="inputPhone">Phone # (optional):</label>
+    <input type="tel" class="form-control" id="inputPhone" data-ng-model="phonenumber">
+  </div>
+  <div class="form-group">
+    <label for="inputComments">How can we help?</label>
+    <textarea rows="5" cols="50" class="form-control" id="inputComments" data-ng-model="comments"></textarea>
+    <!-- <input type="email" class="form-control" id="inputComments" data-ng-model="comments"> -->
+  </div>
+
+  
+  <button type="submit" class="btn btn-default">Submit</button>
+  <p class="jumbotronRightError">{{error}}</p>
+</form>
+
+	<!-- <p>Firstname:</p>
+	<input type="text" data-ng-model="firstname"><br />
+	<p>Lastname:</p>
+	<input type="text" data-ng-model="lastname"><br />
+	<p>Email address:</p>
+	<p>Phone number (optional):</p>
+	<p>How can we help?</p> -->
+</div>
 </div>
 
 <!-- <script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false"></script> -->

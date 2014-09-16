@@ -48,9 +48,32 @@ function CommunityController($scope, $routeParams, $http) {
 function ContactController($scope, $routeParams, $http) {
 	$scope.currentPage = 'Contact';
 
-	$scope.address1 = '2845 Enterprise Road, Suite 107-A';
-	$scope.address2 = 'DeBary, FL 32713';
-	$scope.phone = 'Office: (386) 668-9128';
-	$scope.fax = 'Fax: (386) 668-5743';
-	$scope.email = 'dhbroker@aol.com';
+	$scope.discomaddress1 = '2845 Enterprise Road, Suite 107-A';
+	$scope.discomaddress2 = 'DeBary, FL 32713';
+	$scope.discomphone = 'Office: (386) 668-9128';
+	$scope.discomfax = 'Fax: (386) 668-5743';
+	$scope.discomemail = 'dhbroker@aol.com';
+
+	$scope.sendEmail = function() {
+
+		if ($scope.firstname == '' || $scope.firstname == undefined) {
+			$scope.error = 'Please enter your firstname';
+		}
+		else if ($scope.lastname == '' || $scope.lastname == undefined) {
+			$scope.error = 'Please enter your lastname';
+		}
+		else if ($scope.email === '' || $scope.email == undefined) {
+			$scope.error = 'Please enter your email address';
+		}
+		else if ($scope.comments === '' || $scope.comments == undefined) {
+			$scope.error = 'Please tell us how we can help you';
+		}
+		else {
+			alert('Sending Email from ' + $scope.firstname + ' ' + $scope.lastname);
+		}
+
+	}
+
+	
+
 }
