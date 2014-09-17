@@ -13,5 +13,7 @@
 		when('/Contact', { controller: ContactController, templateUrl: '../partials/contact.html' }).
 		when('/About', { controller: AboutController, templateUrl: '../partials/about.html' }).
 		when('/Community', { controller: CommunityController, templateUrl: '../partials/community.html' }).
+		when('/Listings', { controller: ListingsController, templateUrl: '../partials/listingtable.html' }).
+		when('/ListingSearch', { controller: ListingSearchController, templateUrl: '../partials/listingsearch.html' }).
 		otherwise({redirectTo: '/Home'});        
 });

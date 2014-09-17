@@ -77,3 +77,11 @@ function ContactController($scope, $routeParams, $http) {
 	
 
 }
+
+function ListingsController($scope, $routeParams, $http) {
+	$scope.currentPage = 'About';
+}
+
+function ListingSearchController($scope, $routeParams, $http) {
+	$scope.currentPage = 'About';
+}

@@ -1,6 +1,31 @@
 /**********************************************************************
   index
 **********************************************************************/
+
+.index_bg {
+  position: absolute;
+  left: 0px;
+  top: 197px;
+  background-image: url('/img/background.png');
+  background-position: 50% -315px;
+  width: 100%;
+  height: 315px;
+  z-index: 5;
+}
+
+.sky_gradient1 {
+  position: absolute;
+  left: 0px;
+  top: 197px;
+  background: -webkit-linear-gradient(#2C77BB, #67C8CE); /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(#2C77BB, #67C8CE); /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(#2C77BB, #67C8CE); /* For Firefox 3.6 to 15 */
+  background: linear-gradient(#2C77BB, #67C8CE); /* Standard syntax */
+  width: 100%;
+  height: 315px;
+  z-index: 1;
+}
+
 .navbar { /*.navbar-default .navHeader {*/
   min-height: 20px;
   margin-bottom: 0px;
@@ -23,7 +48,12 @@
 .discomNav2 {
   margin-left: auto;
   margin-right: auto;
-  width: 350px;
+  display:inline-block;
+  
+}
+
+.navbar .nav > li > a {
+  font-size: 16px;
 }
 
 .gradient {
@@ -31,6 +61,45 @@
   background: -o-linear-gradient(#67C8CE, #2C77BB); /* For Opera 11.1 to 12.0 */
   background: -moz-linear-gradient(#67C8CE, #2C77BB); /* For Firefox 3.6 to 15 */
   background: linear-gradient(#67C8CE, #2C77BB); /* Standard syntax */
+}
+
+#main {
+  position:relative;
+  left: 0px;
+  top: 0px;
+  z-index: 10;
+}
+
+/**********************************************************************
+  Home Page
+**********************************************************************/
+
+#home_contacts {
+  height: 250px;
+}
+
+#home_about {
+  background-color: #67C8CE;
+  margin: 5px;
+}
+
+.home_panels {
+  
+  display: block;
+}
+
+.home_leftpanel {
+  display:inline-block;
+  float:left;
+  width:64%;
+  margin: 5px;
+}
+
+.home_rightpanel {
+  display:inline-block;
+  float:right;
+  width:34%;
+  margin: 5px;
 }
 
 /**********************************************************************
