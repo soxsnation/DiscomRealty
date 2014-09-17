@@ -31,6 +31,10 @@ function AgentController($scope, $http) {
 	$http.get('data/agents.json').success(function(data) {
 		$scope.agents = data;
 	});
+
+	$http.get('data/agents_text.json').success(function(data) {
+		$scope.header_text = data.header_text;
+	});
 }
 
 function AboutController($scope, $routeParams, $http) {
@@ -80,6 +84,7 @@ function ContactController($scope, $routeParams, $http) {
 
 function ListingsController($scope, $routeParams, $http) {
 	$scope.currentPage = 'About';
+	$scope.listingtableurl = 'http://mfr.mlsmatrix.com/Matrix/public/IDX.aspx?idx=51fb476';
 }
 
 function ListingSearchController($scope, $routeParams, $http) {

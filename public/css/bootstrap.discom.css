@@ -5,7 +5,8 @@
 .index_bg {
   position: absolute;
   left: 0px;
-  top: 197px;
+  /*top: 197px;*/
+  top: 0px;
   background-image: url('/img/background.png');
   background-position: 50% -315px;
   width: 100%;
@@ -13,7 +14,7 @@
   z-index: 5;
 }
 
-.sky_gradient1 {
+.sky_gradient {
   position: absolute;
   left: 0px;
   top: 197px;
@@ -22,7 +23,15 @@
   background: -moz-linear-gradient(#2C77BB, #67C8CE); /* For Firefox 3.6 to 15 */
   background: linear-gradient(#2C77BB, #67C8CE); /* Standard syntax */
   width: 100%;
-  height: 315px;
+  height: 350px;
+  z-index: 1;
+}
+
+body {
+ position: absolute;
+  background-color: #67C8CE;
+  width: 100%;
+  height: 100%;
   z-index: 1;
 }
 
@@ -70,6 +79,11 @@
   z-index: 10;
 }
 
+.discom_footer {
+	background-color: #2C77BB;
+	color: #FFF;
+}
+
 /**********************************************************************
   Home Page
 **********************************************************************/
@@ -81,11 +95,15 @@
 #home_about {
   background-color: #67C8CE;
   margin: 5px;
+
 }
 
 .home_panels {
-  
+  position:relative;
+  left: 0px;
+  top: 0px;
   display: block;
+  z-index: 15;
 }
 
 .home_leftpanel {
@@ -237,6 +255,36 @@
   border-width: 0px;
 }
 
+.agent_header {
+	margin-left: auto;
+  	margin-right: auto;
+  	width: 800px;
+	color: #FFF;
+	font-size: 14px;
+}
+
+
+/**********************************************************************
+  Listing table Page
+**********************************************************************/
+
+.listing_table_frame {
+	width: 100%;
+	height: 720px;
+}
+
+/**********************************************************************
+  Listing search Page
+**********************************************************************/
+
+.listing_search {
+	background-color: #FFF;
+}
+
+.listing_search_frame {
+	width: 100%;
+	height: 720px;
+}
 
 
 /**********************************************************************
