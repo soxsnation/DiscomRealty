@@ -1,16 +1,34 @@
-<h3>{{currentPage}}</h3>
+<br />
+<div class="agent-view">
 <ul class="courses">
-	<li ng-repeat="agent in agents" class="thumbnail">
-		<div style="display:table">
-			<div style="display:inline;float:left">
-				<img src="{{agent.imageUrl}}" alt="{{agent.name}}" style="width:285px;height:101px">
+	<li ng-repeat="agent in agents" class="agent-info">
+		<!-- <div style="display:table"> -->
+			<div class="agent-img">
+				<img src="{{agent.imageUrl}}" alt="{{agent.name}}" style="width:72px;height:92px">
 			</div>
-			<div style="display:inline;float:right">
+			<div class="agent-contact">
 				<b>{{agent.name}}</b>
 				<p>Bus: &nbsp;{{agent.businessPhone}}</p>
 				<p>Cell: &nbsp;{{agent.cellPhone}}</p>
 				<p>Email: &nbsp;{{agent.email}}</p>
 			</div>
-		</div>
+		<!-- </div> -->
 	</li>
 </ul>
+</div>
+<!-- <div style="display:inline-block;float:right;">
+<ul class="courses">
+	<li ng-repeat="agent in agents" class="agent-info">
+			<div class="agent-img">
+				<img src="{{agent.imageUrl}}" alt="{{agent.name}}" style="width:72px;height:92px">
+			</div>
+			<div class="agent-contact">
+				<b>{{agent.name}}</b>
+				<p>Bus: &nbsp;{{agent.businessPhone}}</p>
+				<p>Cell: &nbsp;{{agent.cellPhone}}</p>
+				<p>Email: &nbsp;{{agent.email}}</p>
+			</div>
+	</li>
+</ul>
+</div> -->
+

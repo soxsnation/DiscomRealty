@@ -1,15 +1,58 @@
+/**********************************************************************
+  index
+**********************************************************************/
+.navbar { /*.navbar-default .navHeader {*/
+  min-height: 20px;
+  margin-bottom: 0px;
+  border-width: 0px;
+}
+
+.discomHeader {
+  background-color: #67C8CE;
+}
+
+/*.collapse .navbar-collapse {
+  margin-left: 150px;
+}*/
+
+.nav  {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.discomNav2 {
+  margin-left: auto;
+  margin-right: auto;
+  width: 350px;
+}
+
+.gradient {
+  background: -webkit-linear-gradient(#67C8CE, #2C77BB); /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(#67C8CE, #2C77BB); /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(#67C8CE, #2C77BB); /* For Firefox 3.6 to 15 */
+  background: linear-gradient(#67C8CE, #2C77BB); /* Standard syntax */
+}
+
+/**********************************************************************
+  Contact Page
+**********************************************************************/
+
 /* line 4081 */
 .navbar-default {
+  background-color: inherit;
+  border-color: #FFF;
+}
+
+.discomNav {
   background-color: #2C77BB;
-  border-color: #37499F;
 }
 
 /* line 4104 */
 .navbar-default .navbar-nav > .active > a,
 .navbar-default .navbar-nav > .active > a:hover,
 .navbar-default .navbar-nav > .active > a:focus {
-  color: #ffffff;
-  background-color: #2C77BB;
+  color: #FFF;
+  background-color: inherit;
 }
 
 /* line 4534 */
@@ -30,6 +73,7 @@
 }
 
 .mapView {
+  color: #000;
 	background-color: #FFF;
 	width: 450px;
 	height: 450px;
@@ -80,3 +124,52 @@
 	color: #FFF;
 	font-size: 14px;
 }
+
+/**********************************************************************
+  Agents Page
+**********************************************************************/
+
+.agent-view {
+  /*display:inline;*/
+  /*float:left;*/
+  margin-left: auto;
+  margin-right: auto;
+  width: 800px;
+  color: #FFF;
+}
+
+/* line 4572 */
+.agent-info {
+  display: inline-block;
+  padding: 4px;
+  margin: 10px 5px;
+  line-height: 1.42857143;
+  background-color: #3989BF;
+  border: 1px solid #dfd7ca;
+  border-radius: 4px;
+  width: 360px;
+  -webkit-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+
+.agent-img {
+  display:inline-block;
+  float:left;
+  margin: 5px;
+  width: 80px;
+}
+
+.agent-contact1 {
+  display:inline-block;
+  float:right;
+  margin: 5px;
+  width: 350px;
+  border-width: 0px;
+}
+
+
+
+/**********************************************************************
+  Contact Page
+**********************************************************************/
