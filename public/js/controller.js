@@ -15,9 +15,64 @@ function HomeController($scope, $http) {
 	// $scope.downPayment = 0;
 
 	$scope.calculatePayments = function() {
-		var t = (($scope.rate / 100 / 12) * ($scope.price - $scope.downPayment));
-		var b = (1 - Math.pow(1 + ($scope.rate / 100 / 12), $scope.term * -12));		
-		$scope.monthlyPayment =  Math.round(t / b);
+		console.log('$scope.price: ' + $scope.price);
+		if ($scope.price == undefined) {
+			$scope.morgCalc_Error = 'Please input a price';
+			$scope.monthlyPayment = '';
+		}
+		else if ($scope.downPayment == undefined) {
+			$scope.morgCalc_Error = 'Please input a downPayment';
+			$scope.monthlyPayment = '';
+		}
+		else if ($scope.rate == undefined) {
+			$scope.morgCalc_Error = 'Please input a rate';
+			$scope.monthlyPayment = '';
+		}
+		else if ($scope.term == undefined) {
+			$scope.morgCalc_Error = 'Please input a term';
+			$scope.monthlyPayment = '';
+		}
+		else {
+			$scope.morgCalc_Error = '';
+			var t = (($scope.rate / 100 / 12) * ($scope.price - $scope.downPayment));
+			var b = (1 - Math.pow(1 + ($scope.rate / 100 / 12), -$scope.term * 12));
+			$scope.monthlyPayment = Math.round(t / b);
+		}
+
+		
+	}
+
+	$scope.downPayment_update = function() {
+		if ($scope.price !== undefined) {
+			$scope.loanAmount = $scope.price - $scope.downPayment;
+			$scope.downPaymentPercent = $scope.price / $scope.downPayment * 100;
+		}
+	}
+
+	$scope.downPaymentPercent_update = function() {
+		if ($scope.price !== undefined) {
+			$scope.downPayment = $scope.price * $scope.downPaymentPercent / 100;
+			$scope.loanAmount = $scope.price - $scope.downPayment;
+		}
+	}
+
+	$scope.loanAmount_update = function() {
+		if ($scope.loanAmount !== undefined) {
+			$scope.downPayment = $scope.price + $scope.loanAmount;
+			$scope.downPaymentPercent = $scope.price / $scope.downPayment * 100;
+		}
+	}
+
+	$scope.price_update = function() {
+		if ($scope.downPayment !== undefined) {
+			$scope.downPayment_update();
+		}
+		else if ($scope.loanAmount !== undefined) {
+			$scope.loanAmount_update();
+		}
+		else if ($scope.downPaymentPercent !== undefined) {
+			$scope.downPaymentPercent_update();
+		}
 	}
 
 	$scope.currentPage = 'Home';
@@ -28,13 +83,17 @@ function HomeController($scope, $http) {
 function AgentController($scope, $http) {
 	$scope.currentPage = 'Agent';
 
+	$http.put('data/contact.json', 'contactInfo').success(function(data) { 
+		$scope.header_text = 'saved'
+	});
+
 	$http.get('data/agents.json').success(function(data) {
 		$scope.agents = data;
 	});
 
-	$http.get('data/agents_text.json').success(function(data) {
-		$scope.header_text = data.header_text;
-	});
+	// $http.get('data/agents_text.json').success(function(data) {
+	// 	$scope.header_text = data.header_text;
+	// });
 }
 
 function AboutController($scope, $routeParams, $http) {
@@ -62,23 +121,19 @@ function ContactController($scope, $routeParams, $http) {
 
 		if ($scope.firstname == '' || $scope.firstname == undefined) {
 			$scope.error = 'Please enter your firstname';
-		}
-		else if ($scope.lastname == '' || $scope.lastname == undefined) {
+		} else if ($scope.lastname == '' || $scope.lastname == undefined) {
 			$scope.error = 'Please enter your lastname';
-		}
-		else if ($scope.email === '' || $scope.email == undefined) {
+		} else if ($scope.email === '' || $scope.email == undefined) {
 			$scope.error = 'Please enter your email address';
-		}
-		else if ($scope.comments === '' || $scope.comments == undefined) {
+		} else if ($scope.comments === '' || $scope.comments == undefined) {
 			$scope.error = 'Please tell us how we can help you';
-		}
-		else {
+		} else {
 			alert('Sending Email from ' + $scope.firstname + ' ' + $scope.lastname);
 		}
 
 	}
 
-	
+
 
 }
 

@@ -1,4 +1,4 @@
-<div class="index_bg"></div>
+<div class="index_bg1"></div>
 <br />
 <!-- <div class="index_bg" > -->
 	<!-- <div class="sky_gradient"> -->
@@ -11,35 +11,36 @@
 				</div>
 			</div>
 			<div class="home_rightpanel">
-				<div class="panel panel-default">
+				<!-- <div class="panel panel-default">
 					<div class="panel-body" id="home_contacts">
 						<p>Contacts</p>
 					</div>
-				</div>
+				</div> -->
 				<div class="panel panel-default">
 					<div class="panel-body">
 						<form data-ng-submit="calculatePayments()">
 							<p>Mortgage Calculator</p>
-							<div style="display:table;">
-								<div style="float:left;margin:10px;">
+							<div class="morgCalc">
+								<div class="morgCalc_Left">
 									Purchase Price:<br />
-									<input type="text" data-ng-model="price" placeholder="500000"><br />
+									<input type="text" data-ng-model="price" data-ng-change="price_update()" placeholder="500000" class="morgCalc_Input"><br />
 									Down Payment:<br />
-									<input type="text" data-ng-model="downPayment" placeholder="$"><br />
+									<input type="text" data-ng-model="downPayment" data-ng-change="downPayment_update()" placeholder="$" class="morgCalc_Input"><br />
 									Interest Rate:<br />
-									<input type="text" data-ng-model="rate" placeholder="%"><br />
+									<input type="text" data-ng-model="rate" placeholder="%" class="morgCalc_Input"><br />
 								</div>
-								<div style="float:right;margin:10px;">
+								<div class="morgCalc_Right">
 									Loan Amount:<br />
-									<input type="text" data-ng-model="loanAmount" placeholder="450000"><br />
+									<input type="text" data-ng-model="loanAmount" data-ng-change="loanAmount_update()" placeholder="450000" class="morgCalc_Input"><br />
 									Down Payment%:<br />
-									<input type="text" data-ng-model="downPaymentPercent" placeholder="%"><br />
+									<input type="text" data-ng-model="downPaymentPercent" data-ng-change="downPaymentPercent_update()" placeholder="%" class="morgCalc_Input"><br />
 									Terms:<br />
-									<input type="text" data-ng-model="term" placeholder="30"><br />
+									<input type="text" data-ng-model="term" placeholder="30" class="morgCalc_Input"><br />
 								</div>
 							</div>
 							<input class="btn-primary" type="submit" value="Calculate">
-							<p> Monthly payment: $ {{monthlyPayment}}
+							<p class="morgCalc_Results"> Monthly payment: $ {{monthlyPayment}} </p>
+							<p class="morgCalc_Error"> {{morgCalc_Error}} </p>
 						</form>
 					</div>
 				</div>
