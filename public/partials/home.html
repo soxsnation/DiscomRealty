@@ -26,7 +26,7 @@
 									<input type="text" data-ng-model="price" data-ng-change="price_update()" placeholder="500000" class="morgCalc_Input"><br />
 									Down Payment:<br />
 									<input type="text" data-ng-model="downPayment" data-ng-change="downPayment_update()" placeholder="$" class="morgCalc_Input"><br />
-									Interest Rate:<br />
+									Interest Rate (%):<br />
 									<input type="text" data-ng-model="rate" placeholder="%" class="morgCalc_Input"><br />
 								</div>
 								<div class="morgCalc_Right">
@@ -34,11 +34,14 @@
 									<input type="text" data-ng-model="loanAmount" data-ng-change="loanAmount_update()" placeholder="450000" class="morgCalc_Input"><br />
 									Down Payment%:<br />
 									<input type="text" data-ng-model="downPaymentPercent" data-ng-change="downPaymentPercent_update()" placeholder="%" class="morgCalc_Input"><br />
-									Terms:<br />
+									Terms (years):<br />
 									<input type="text" data-ng-model="term" placeholder="30" class="morgCalc_Input"><br />
 								</div>
 							</div>
+							<div class="btn_morg">
 							<input class="btn-primary" type="submit" value="Calculate">
+							<br /><br />
+							</div>
 							<p class="morgCalc_Results"> Monthly payment: $ {{monthlyPayment}} </p>
 							<p class="morgCalc_Error"> {{morgCalc_Error}} </p>
 						</form>

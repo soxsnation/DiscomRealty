@@ -6,7 +6,7 @@
  */
 
 
- angular.module('discom', []).config(function ($routeProvider) {
+ angular.module('discom', ['google-maps']).config(function ($routeProvider) {
     $routeProvider.
 		when('/Home', { controller: HomeController, templateUrl: '../partials/home.html' }).
         when('/Agents', { controller: AgentController, templateUrl: '../partials/agents.html' }).

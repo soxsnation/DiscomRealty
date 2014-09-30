@@ -19,27 +19,23 @@ function HomeController($scope, $http) {
 		if ($scope.price == undefined) {
 			$scope.morgCalc_Error = 'Please input a price';
 			$scope.monthlyPayment = '';
-		}
-		else if ($scope.downPayment == undefined) {
+		} else if ($scope.downPayment == undefined) {
 			$scope.morgCalc_Error = 'Please input a downPayment';
 			$scope.monthlyPayment = '';
-		}
-		else if ($scope.rate == undefined) {
+		} else if ($scope.rate == undefined) {
 			$scope.morgCalc_Error = 'Please input a rate';
 			$scope.monthlyPayment = '';
-		}
-		else if ($scope.term == undefined) {
+		} else if ($scope.term == undefined) {
 			$scope.morgCalc_Error = 'Please input a term';
 			$scope.monthlyPayment = '';
-		}
-		else {
+		} else {
 			$scope.morgCalc_Error = '';
 			var t = (($scope.rate / 100 / 12) * ($scope.price - $scope.downPayment));
 			var b = (1 - Math.pow(1 + ($scope.rate / 100 / 12), -$scope.term * 12));
 			$scope.monthlyPayment = Math.round(t / b);
 		}
 
-		
+
 	}
 
 	$scope.downPayment_update = function() {
@@ -66,11 +62,9 @@ function HomeController($scope, $http) {
 	$scope.price_update = function() {
 		if ($scope.downPayment !== undefined) {
 			$scope.downPayment_update();
-		}
-		else if ($scope.loanAmount !== undefined) {
+		} else if ($scope.loanAmount !== undefined) {
 			$scope.loanAmount_update();
-		}
-		else if ($scope.downPaymentPercent !== undefined) {
+		} else if ($scope.downPaymentPercent !== undefined) {
 			$scope.downPaymentPercent_update();
 		}
 	}
@@ -83,17 +77,17 @@ function HomeController($scope, $http) {
 function AgentController($scope, $http) {
 	$scope.currentPage = 'Agent';
 
-	$http.put('data/contact.json', 'contactInfo').success(function(data) { 
-		$scope.header_text = 'saved'
-	});
+	// $http.put('data/contact.json', 'contactInfo').success(function(data) {
+	// 	$scope.header_text = 'saved'
+	// });
 
 	$http.get('data/agents.json').success(function(data) {
 		$scope.agents = data;
 	});
 
-	// $http.get('data/agents_text.json').success(function(data) {
-	// 	$scope.header_text = data.header_text;
-	// });
+	$http.get('data/agents_text.json').success(function(data) {
+		$scope.header_text = data.header_text;
+	});
 }
 
 function AboutController($scope, $routeParams, $http) {
@@ -133,7 +127,39 @@ function ContactController($scope, $routeParams, $http) {
 
 	}
 
+	$scope.map = {
+		center: {
+			latitude: 28.899627,
+			longitude: -81.285907
+		},
+		zoom: 14,
+		title: 'Discom Realty'
+	};
+	$scope.map_options = {scrollwheel: true};
 
+	$scope.marker = {
+            id:0,
+            coords: {
+                latitude: 28.899626,
+                longitude: -81.285908
+            },
+            options: { draggable: true },
+            events: {
+                dragend: function (marker, eventName, args) {
+                    console.log('marker dragend');
+                }
+            }
+        }
+
+	// $scope.marker = {
+	// 	id: 0,
+	// 	coords: {
+	// 		latitude: 28.899626,
+	// 		longitude: -81.285908
+	// 	},
+	// 	show: false
+	// };
+	// $scope.title = "Window Title!";
 
 }
 
