@@ -40,8 +40,8 @@ function HomeController($scope, $http) {
 
 	$scope.downPayment_update = function() {
 		if ($scope.price !== undefined) {
-			$scope.loanAmount = $scope.price - $scope.downPayment;
-			$scope.downPaymentPercent = $scope.price / $scope.downPayment * 100;
+			$scope.loanAmount = Math.round($scope.price - $scope.downPayment);
+			$scope.downPaymentPercent = $scope.downPayment / $scope.price * 100;
 		}
 	}
 
@@ -54,8 +54,8 @@ function HomeController($scope, $http) {
 
 	$scope.loanAmount_update = function() {
 		if ($scope.loanAmount !== undefined) {
-			$scope.downPayment = $scope.price + $scope.loanAmount;
-			$scope.downPaymentPercent = $scope.price / $scope.downPayment * 100;
+			$scope.downPayment = $scope.price - $scope.loanAmount;
+			$scope.downPaymentPercent = $scope.downPayment / $scope.price * 100;
 		}
 	}
 
@@ -135,6 +135,7 @@ function ContactController($scope, $routeParams, $http) {
 		zoom: 14,
 		title: 'Discom Realty'
 	};
+
 	$scope.map_options = {scrollwheel: true};
 
 	$scope.marker = {
@@ -150,6 +151,7 @@ function ContactController($scope, $routeParams, $http) {
                 }
             }
         }
+ 
 
 	// $scope.marker = {
 	// 	id: 0,
