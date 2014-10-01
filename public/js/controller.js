@@ -91,7 +91,7 @@ function HomeController($scope, $http, $timeout) {
 
 	$scope.counter = 0;
     $scope.onTimeout = function(){
-    	if ($scope.counter - 1 >= agentList.length) {
+    	if ($scope.counter  >= agentList.length - 1) {
     		$scope.counter = 0;
     	}
     	else {
