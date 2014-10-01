@@ -7,7 +7,7 @@
 
 /* Controllers */
 
-function HomeController($scope, $http) {
+function HomeController($scope, $http, $timeout) {
 	// $scope.monthlyPayment = 0;
 	// $scope.rate = 3.95;
 	// $scope.term = 30;
@@ -70,19 +70,68 @@ function HomeController($scope, $http) {
 	}
 
 	$scope.currentPage = 'Home';
-	$scope.intro = 'We\'re glad you\'re here! We have been serving West Volusia and Seminole counties since 1990 providing over 30 years of real estate experience. We pride ourselves on repeat business and referrals from satisfies clients. Come get to know us at Discom Realty and <i>discover</i> our <i>committment</i> to you, our newest neighbor';
+	$http.get('data/home.json').success(function(data) {
+		$scope.intro = data.intro;
+	});
+
+	var agentList = [];
+	$scope.agents = [];
+	$scope.agent = {};
+	$http.get('data/agents.json').success(function(data) {
+		for (var i = 0; i < data.length; ++i) {
+			if (data[i].active === true) {
+				agentList.push(data[i]);
+				// $scope.agents.push(data[i]);				
+			}
+		}
+		$scope.agents = agentList;
+		// console.log($scope.agents);
+		$scope.agent = agentList[0];
+	});
+
+	$scope.counter = 0;
+    $scope.onTimeout = function(){
+    	if ($scope.counter - 1 >= agentList.length) {
+    		$scope.counter = 0;
+    	}
+    	else {
+        	$scope.counter++;
+        }
+        $scope.agent = agentList[$scope.counter];
+        mytimeout = $timeout($scope.onTimeout,10000);
+    }
+    var mytimeout = $timeout($scope.onTimeout,10000);
+
+    $scope.stop = function(){
+        $timeout.cancel(mytimeout);
+    }
+
+	// var updateAgent;
+	// updateAgent = $interval(function() {
+	// 	$scope.intro = 'asdf';
+	// },1000);
+
+
+	// $scope.intro = 'We\'re glad you\'re here! We have been serving West Volusia and Seminole counties since 1990 providing over 30 years of real estate experience. We pride ourselves on repeat business and referrals from satisfies clients. Come get to know us at Discom Realty and <i>discover</i> our <i>committment</i> to you, our newest neighbor';
 };
 
 
 function AgentController($scope, $http) {
 	$scope.currentPage = 'Agent';
+	$scope.agents = [];
 
 	// $http.put('data/contact.json', 'contactInfo').success(function(data) {
 	// 	$scope.header_text = 'saved'
 	// });
 
 	$http.get('data/agents.json').success(function(data) {
-		$scope.agents = data;
+		var agentList = [];
+		for (var i = 0; i < data.length; ++i) {
+			if (data[i].active === true) {
+				$scope.agents.push(data[i]);
+			}
+		}
+		 
 	});
 
 	$http.get('data/agents_text.json').success(function(data) {

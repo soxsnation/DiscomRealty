@@ -45,7 +45,7 @@ body {
 }
 
 .discomHeader {
-  background-color: #67C8CE;
+  background-color: #37499F;
 }
 
 /*.collapse .navbar-collapse {
@@ -69,10 +69,10 @@ body {
 }
 
 .gradient {
-  background: -webkit-linear-gradient(#67C8CE, #2C77BB); /* For Safari 5.1 to 6.0 */
+  background: -webkit-linear-gradient(#37499F, #2C77BB); /* For Safari 5.1 to 6.0 */
   background: -o-linear-gradient(#67C8CE, #2C77BB); /* For Opera 11.1 to 12.0 */
   background: -moz-linear-gradient(#67C8CE, #2C77BB); /* For Firefox 3.6 to 15 */
-  background: linear-gradient(#67C8CE, #2C77BB); /* Standard syntax */
+  background: linear-gradient(#37499F, #2C77BB); /* Standard syntax */
 }
 
 #main {
@@ -117,6 +117,17 @@ body {
   margin-left: 150px;
 }
 
+.home_agents {
+  padding: 6px;
+  display: inline-block;
+  background-color: #37499F;
+  width:100%;
+  color: #FFF;
+  font-size: 14px;
+  font-weight: 500;
+  font-family: Roboto, 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
 .home_rightpanel {
   display:inline-block;
   float:right;
@@ -124,27 +135,42 @@ body {
   margin: 5px;
 }
 
+.morgCalc_title {
+  font-size: 20px;
+  font-weight: 500;
+  font-family: Roboto, 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
 .btn_morg {
   display:inline-block;
-  padding:2px 10px;
+  /*padding:2px 10px;*/
+  width:100%;
+}
+
+.btn_morgCalc {
+  width: 44%;
+  font-size: 16px;
 }
 
 .morgCalc {
 	display:block;
+  font-size: 16px;
+  font-weight: 500;
+  font-family: Roboto, 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 
 .morgCalc_Left {
 	display:inline-block;
 	float:left;
-	padding:2px 10px;
-	width: 40%;
+	/*padding:2px 2px;*/
+	width: 44%;
 }
 
 .morgCalc_Right {
 	display:inline-block;
 	float:right;
-	padding:2px 10px;
-	width: 50%;
+	/*padding:2px 2px;*/
+	width: 46%;
 }
 
 .morgCalc_Label {
@@ -152,19 +178,24 @@ body {
 }
 
 .morgCalc_Input {
-	margin-bottom: 10px;
+/*	margin-bottom: 10px;
   margin-top: 2px;
   margin-left: 0px;
-  margin-right: 4px;
+  margin-right: 4px;*/
+  height: 34px;
 }
 
 .morgCalc_Error {
 	color: #F00;
-	font-weight: bold;
+	font-size: 16px;
+  font-weight: 600;
+  font-family: Roboto, 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 
-.morgCalc_Result {
-	
+.morgCalc_Results {
+  font-size: 16px;
+  font-weight: 500;
+	font-family: Roboto, 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 
 
@@ -299,6 +330,10 @@ body {
   width: 80px;
 }
 
+.agent_name {
+  font-size: 16px;
+}
+
 .agent-contact1 {
   display:inline-block;
   float:right;
@@ -343,18 +378,44 @@ body {
   Community Page
 **********************************************************************/
 
+.town_links {
+  list-style:none;
+  font-size: 12pt;
+}
+
+.town_link {
+  list-style:none;
+  font-size: 18pt;
+}
+
 .town_links a:link  {
-  color:#37499F;
+  color:#FFF;
 }
 
 .town_links a:hover {
-  color:#37499F;
+  color:#FFF;
 }
 
 .town_links a:visited {
-  color:#37499F;
+  color:#FFF;
 }
 
+.town_bubble {
+  padding: 15px 20px;
+  margin-bottom: 30px;
+  color: #FFF;
+  background-color: #37499F;
+  
+}
+
+.container .town_bubble {
+  border-radius: 6px;
+  width: 60%;
+  /*height: 635px;*/
+  margin-left: auto;
+  margin-right: auto;
+  display:inline-block;
+}
 
 
 

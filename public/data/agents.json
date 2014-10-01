@@ -4,63 +4,72 @@
         "cellPhone": "407.739.2712",
         "fax": "386.668.5743",
         "email": "dhbroker@aol.com",
-        "imageUrl": "img/agents/DonnaHouseworth.jpg"
+        "imageUrl": "img/agents/DonnaHouseworth.jpg",
+        "active": true
     }, {
         "name": "Monica Emerson",
         "businessPhone": "386.668.9128 ext 105",
         "cellPhone": "407.739.2833",
         "fax": "386.668.5743",
         "email": "monica.houseworth@gmail.com",
-        "imageUrl": "img/agents/MonicaEmerson.jpg"
+        "imageUrl": "img/agents/MonicaEmerson.jpg",
+        "active": true
     }, {
         "name": "Carla Ecoff",
         "businessPhone": "386.668.9128 ext 107",
         "cellPhone": "386.801.5201",
         "fax": "386.668.5743",
         "email": "carlaecoff@comcast.net",
-        "imageUrl": "img/agents/CarlaEcoff.jpg"
+        "imageUrl": "img/agents/CarlaEcoff.jpg",
+        "active": true
     }, {
         "name": "Susan Sands",
         "businessPhone": "386.668.9128 ext 102",
         "cellPhone": "386.801.7469",
         "fax": "386.668.5743",
         "email": "suesands111@yahoo.com",
-        "imageUrl": "img/agents/SusanSands.jpg"
+        "imageUrl": "img/agents/SusanSands.jpg",
+        "active": true
     }, {
         "name": "Cheryl Sassano",
         "businessPhone": "386.668.9128 ext 101",
         "cellPhone": "386.801.0701",
         "fax": "386.668.5743",
         "email": "cherylsells@earthlink.net",
-        "imageUrl": "img/agents/CherylSassano.jpg"
+        "imageUrl": "img/agents/CherylSassano.jpg",
+        "active": true
     }, {
         "name": "Janella Minotta",
         "businessPhone": "386.668.9128 ext 152",
         "cellPhone": "407.739.4146",
         "fax": "386.668.5743",
         "email": "jminotta3@gmail.com",
-        "imageUrl": "img/agents/JanellaMinotta.jpg"
+        "imageUrl": "img/agents/JanellaMinotta.jpg",
+        "active": true
     }, {
         "name": "William L. \"Bill\" Walsh",
         "businessPhone": "386.668.9128 ext 150",
         "cellPhone": "386.717.2222",
         "fax": "386.668.5743",
         "email": "marineret30@yahoo.com",
-        "imageUrl": "img/agents/WilliamWalsh.jpg"
+        "imageUrl": "img/agents/WilliamWalsh.jpg",
+        "active": false
     }, {
         "name": "Nikki Kress",
         "businessPhone": "386.668.9128 ext 151",
         "cellPhone": "407.484.0558",
         "fax": "386.668.5743",
         "email": "nikki.kress@ymail.com",
-        "imageUrl": "img/agents/NikkiKress.jpg"
+        "imageUrl": "img/agents/NikkiKress.jpg",
+        "active": true
     }, {
         "name": "Megan Mulligan",
         "businessPhone": "386.668.9128 ext 104",
         "cellPhone": "321.482.1300",
         "fax": "386.668.5743",
         "email": "megan.seaglass@gmail.com",
-        "imageUrl": "img/agents/MeganMulligan.jpg"
+        "imageUrl": "img/agents/MeganMulligan.jpg",
+        "active": true
     }
 
 ]

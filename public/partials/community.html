@@ -1,15 +1,15 @@
 <br />
-<div class="town_links">
-<ul>
-	<li ng-repeat="town in towns" class="thumbnail">
-		<div style="display:table">			
-			<div style="display:inline;">
-				<a href="{{town.link}}" target="_blank"><h3>{{town.town}}</h3></a>
-				<!-- <p>{{town.text}}</p> -->
-				<br />
-				<!-- <br /> -->
+<center>
+<div class="town_bubble">
+	<div class="town_links">
+		<p>Click the links below to explore what the area has to offer:</p>
+		<!-- <ul class="town_link"> -->
+			<div ng-repeat="town in towns" class="town_link">
+				<!-- <div style="display:table">			 -->
+				<!-- <div style="display:inline;"> -->
+				<a href="{{town.link}}" target="_blank"><p>{{town.town}}</p></a>
 			</div>
-		</div>
-	</li>
-</ul>
+		<!-- </ul> -->
+	</div>
 </div>
+</center>
