@@ -1,6 +1,6 @@
-/**********************************************************************
+/*********************************************************************************************************
   index
-**********************************************************************/
+/*********************************************************************************************************/
 
 
 
@@ -87,9 +87,9 @@ body {
 	color: #FFF;
 }
 
-/**********************************************************************
+/*********************************************************************************************************
   Home Page
-**********************************************************************/
+/*********************************************************************************************************/
 
 #home_contacts {
   height: 250px;
@@ -101,20 +101,29 @@ body {
   color: #FFF;
 }
 
-.home_panels {
+/*.home_panels {
   position:relative;
   left: 0px;
   top: 0px;
   display: block;
   z-index: 15;
+}*/
+
+.home_about {
+  background-color: #37499F;
 }
 
 .home_leftpanel {
   display:inline-block;
   float:left;
-  width:44%;
-  margin: 5px;
-  margin-left: 150px;
+  width:55%;
+  /*margin: 5px;*/
+  /*margin-left: 150px;*/
+}
+
+.home_intro_text {
+  font-size: 16pt;
+  font-family: Roboto, 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 
 .home_agents {
@@ -124,6 +133,7 @@ body {
   width:100%;
   color: #FFF;
   font-size: 14px;
+  border-radius: 4px;
   font-weight: 500;
   font-family: Roboto, 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
@@ -131,11 +141,12 @@ body {
 .home_rightpanel {
   display:inline-block;
   float:right;
-  width:34%;
-  margin: 5px;
+  width:40%;
+  /*margin: 5px;*/
 }
 
 .morgCalc_title {
+  /*color:#000;*/
   font-size: 20px;
   font-weight: 500;
   font-family: Roboto, 'Helvetica Neue', Helvetica, Arial, sans-serif;
@@ -154,8 +165,10 @@ body {
 
 .morgCalc {
 	display:block;
+  /*color:#000;*/
   font-size: 16px;
   font-weight: 500;
+  background-color: #37499F;
   font-family: Roboto, 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 
@@ -199,9 +212,9 @@ body {
 }
 
 
-/**********************************************************************
+/*********************************************************************************************************
   Contact Page
-**********************************************************************/
+/*********************************************************************************************************/
 
 /* line 4081 */
 .navbar-default {
@@ -222,21 +235,7 @@ body {
 }
 
 /* line 4534 */
-.jumbotronLeft {
-  padding: 30px;
-  margin-bottom: 30px;
-  color: #FFF;
-  background-color: #2C77BB;
-  
-}
 
-.container .jumbotronLeft {
-  border-radius: 6px;
-  width: 70%;
-  height: 635px;
-  display: inline-block;
-  float: left;
-}
 
 .mapView {
   color: #000;
@@ -245,48 +244,38 @@ body {
 	height: 450px;
 }
 
-.jumbotronRight {
-  padding: 15px 20px;
-  margin-bottom: 30px;
-  color: #FFF;
-  background-color: #67C8CE;
-  
-}
-
-.container .jumbotronRight {
-  border-radius: 6px;
+.contact_right {
+  border: 1px solid #dfd7ca;
+  border-radius: 4px;
   width: 28%;
-  height: 635px;
-  display: inline-block;
-  float: right;
 }
 
-.jumbotronRight input {
+.contact_right input {
 	padding: 6px;
 	height: 36px;
 }
 
-.jumbotronRight textarea {
+.contact_right textarea {
 	padding: 6px;
 }
 
-.jumbotronRight label {
+.contact_right label {
 	font-weight: 500;
 	font-size: 15px;
 }
 
-.jumbotronRightTitle {
+.contact_right_Title {
 	font-size: 18pt;
 	margin-bottom: 10px;
 }
 
-.jumbotronRightError {
+.contact_right_Error {
 	color: #F00;
 	font-weight: 500;
 	font-size: 18px;
 }
 
-.jumbotronRight-control {
+.contact_right-control {
 	color: #FFF;
 	font-size: 14px;
 }
@@ -295,9 +284,9 @@ body {
   height: 450px; 
 }
 
-/**********************************************************************
+/*********************************************************************************************************
   Agents Page
-**********************************************************************/
+/*********************************************************************************************************/
 
 .agent-view {
   /*display:inline;*/
@@ -309,7 +298,7 @@ body {
 }
 
 /* line 4572 */
-.agent-info {
+.agent_info {
   display: inline-block;
   padding: 4px;
   margin: 10px 5px;
@@ -351,18 +340,18 @@ body {
 }
 
 
-/**********************************************************************
+/*********************************************************************************************************
   Listing table Page
-**********************************************************************/
+/*********************************************************************************************************/
 
 .listing_table_frame {
 	width: 100%;
 	height: 720px;
 }
 
-/**********************************************************************
+/*********************************************************************************************************
   Listing search Page
-**********************************************************************/
+/*********************************************************************************************************/
 
 .listing_search {
 	background-color: #FFF;
@@ -374,9 +363,9 @@ body {
 }
 
 
-/**********************************************************************
+/*********************************************************************************************************
   Community Page
-**********************************************************************/
+/*********************************************************************************************************/
 
 .town_links {
   list-style:none;
@@ -399,8 +388,67 @@ body {
 .town_links a:visited {
   color:#FFF;
 }
+.jumbotron .town_bubble {
+height: 600px;
+}
 
-.town_bubble {
+.container .town_bubble {
+  /*border-radius: 6px;*/
+  width: 60%;
+  height: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: #37499F;
+  /*display:inline-block;*/
+}
+
+
+
+
+/*********************************************************************************************************
+  Contact Page
+/*********************************************************************************************************/
+
+
+
+
+
+
+/*********************************************************************************************************
+  Common Controls
+/*********************************************************************************************************/
+
+.jumbotron {
+  padding: 30px;
+  margin-bottom: 30px;
+  color: #FFF;
+  /*background-color: inherit;*/
+  
+}
+
+.container .jumbotron {
+  border-radius: 6px;
+  /*height: 635px;*/
+  display: inline-block;
+}
+
+.jumbotronLeft {
+  padding: 30px;
+  margin-bottom: 30px;
+  color: #FFF;
+  background-color: #2C77BB;
+  
+}
+
+.container .jumbotronLeft {
+  border-radius: 6px;
+  /*width: 70%;*/
+  height: 635px;
+  display: inline-block;
+  float: left;
+}
+
+.jumbotronRight {
   padding: 15px 20px;
   margin-bottom: 30px;
   color: #FFF;
@@ -408,18 +456,18 @@ body {
   
 }
 
-.container .town_bubble {
+.container .jumbotronRight {
   border-radius: 6px;
-  width: 60%;
-  /*height: 635px;*/
-  margin-left: auto;
-  margin-right: auto;
-  display:inline-block;
+  /*width: 28%;*/
+  height: 635px;
+  display: inline-block;
+  float: right;
 }
 
 
 
 
-/**********************************************************************
-  Contact Page
-**********************************************************************/
+
+
+
+

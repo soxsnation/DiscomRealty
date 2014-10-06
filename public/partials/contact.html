@@ -1,5 +1,5 @@
 <div>
-  <div class="jumbotronLeft">
+  <div class="jumbotronLeft contact_border">
     <center>
     <div class="mapView">
       <google-map center='map.center' zoom="map.zoom">
@@ -15,8 +15,8 @@
     <center>{{discomemail}}</center>
     <br /><br />
   </div>
-  <div class="jumbotronRight">
-    <div class="jumbotronRightTitle">How can we help you?</div>
+  <div class="jumbotronRight contact_right">
+    <div class="contact_right_Title">How can we help you?</div>
     <form role="form" data-ng-submit="sendEmail()">
       <div class="form-group">
         <label for="inputFirstname">First name:</label>
@@ -41,7 +41,7 @@
       </div>
       
       <button type="submit" class="btn btn-default">Submit</button>
-      <p class="jumbotronRightError">{{error}}</p>
+      <p class="contact_right_Error">{{error}}</p>
     </form>
     <!-- <p>Firstname:</p>
     <input type="text" data-ng-model="firstname"><br />
