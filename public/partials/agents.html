@@ -3,7 +3,7 @@
 <div class="agent_header">
 <div data-ng-bind-html-unsafe="header_text" ></div>
 </div>
-<br /><br />
+<br />
 <div class="agent-view">
 <ul class="courses">
 	<li ng-repeat="agent in agents" class="agent_info">
@@ -11,7 +11,7 @@
 			<div class="agent-img">
 				<img src="{{agent.imageUrl}}" alt="{{agent.name}}" style="width:72px;height:92px">
 			</div>
-			<div class="agent-contact">
+			<div class="agent_contact">
 				<div class="agent_name">{{agent.name}}</div>
 				<p>Bus: &nbsp;{{agent.businessPhone}} <br />
 				Cell: &nbsp;{{agent.cellPhone}}<br />

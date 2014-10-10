@@ -5,76 +5,56 @@
 <!-- <div class="home_panels"> -->
 <div class="home_leftpanel">
 	<div class="jumbotron home_about">
-		<!-- <div class="home_about"> -->
-		<!-- <div class="panel panel-default" id="home_about"> -->
-		<!-- <div class="panel-body"> -->
-
 		<div data-ng-bind-html-unsafe="intro" class="home_intro_text" ></div>
 		<br /><br />
 		
-		<!-- </div> -->
-		<!-- </div> -->
 		<br /><br />
-		<!-- <div class="home_agents">
-					<div class="agent-img">
-								<img src="{{agent.imageUrl}}" alt="{{agent.name}}" style="width:72px;height:92px">
-					</div>
-					<div class="agent-contact">
-								<div class="agent_name">{{agent.name}}</div>
-								<p>Bus: &nbsp;{{agent.businessPhone}}</p>
-								<p>Cell: &nbsp;{{agent.cellPhone}}</p>
-								<p>Email: &nbsp;{{agent.email}}</p>
-								<p>Bus: &nbsp;{{agent.businessPhone}} <br />
-								Cell: &nbsp;{{agent.cellPhone}}<br />
-								Email: &nbsp;{{agent.email}}</p>
-					</div>
-		</div> -->
+		
 		<br /><br />
-		<img src="./img/MLS_logo.jpg" alt="discom_logo" style="width:150px;height:80px">
+		<img src="./img/MLS_logo.jpg" alt="discom_logo" class="home_mls_logo">
 	</div>
 </div>
 </div>
 <div class="home_rightpanel">
-<div class="jumbotron morgCalc">
-	<p class="morgCalc_title">Mortgage Calculator</p>
-	<form data-ng-submit="calculatePayments()" role="form">
-		<div class="morgCalc form-group">
-			<div class="morgCalc_Left">
-				Purchase Price:<br />
-				<input type="text" data-ng-model="price" data-ng-change="price_update()" placeholder="500000" class="morgCalc_Input form-control"><br />
-				Down Payment:<br />
-				<input type="text" data-ng-model="downPayment" data-ng-change="downPayment_update()" placeholder="$" class="morgCalc_Input form-control"><br />
-				Interest Rate (%):<br />
-				<input type="text" data-ng-model="rate" placeholder="%" class="morgCalc_Input form-control"><br />
+	<div class="jumbotron morgCalc">
+		<p class="morgCalc_title">Mortgage Calculator</p>
+		<form data-ng-submit="calculatePayments()" role="form">
+			<div class="morgCalc form-group">
+				<div class="morgCalc_Left">
+					Purchase Price:<br />
+					<input type="text" data-ng-model="price" data-ng-change="price_update()" placeholder="500000" class="morgCalc_Input form-control"><br />
+					Down Payment:<br />
+					<input type="text" data-ng-model="downPayment" data-ng-change="downPayment_update()" placeholder="$" class="morgCalc_Input form-control"><br />
+					Interest Rate (%):<br />
+					<input type="text" data-ng-model="rate" placeholder="%" class="morgCalc_Input form-control"><br />
+				</div>
+				<div class="morgCalc_Right">
+					Loan Amount:<br />
+					<input type="text" data-ng-model="loanAmount" data-ng-change="loanAmount_update()" placeholder="450000" class="morgCalc_Input form-control"><br />
+					Down Payment%:<br />
+					<input type="text" data-ng-model="downPaymentPercent" data-ng-change="downPaymentPercent_update()" placeholder="%" class="morgCalc_Input form-control"><br />
+					Terms (years):<br />
+					<input type="text" data-ng-model="term" placeholder="30" class="morgCalc_Input form-control"><br />
+				</div>
 			</div>
-			<div class="morgCalc_Right">
-				Loan Amount:<br />
-				<input type="text" data-ng-model="loanAmount" data-ng-change="loanAmount_update()" placeholder="450000" class="morgCalc_Input form-control"><br />
-				Down Payment%:<br />
-				<input type="text" data-ng-model="downPaymentPercent" data-ng-change="downPaymentPercent_update()" placeholder="%" class="morgCalc_Input form-control"><br />
-				Terms (years):<br />
-				<input type="text" data-ng-model="term" placeholder="30" class="morgCalc_Input form-control"><br />
+			<div class="btn_morg">
+				<input class="btn_morgCalc btn btn-primary" type="submit" value="Calculate">
+				<br /><br />
 			</div>
-		</div>
-		<div class="btn_morg">
-			<input class="btn_morgCalc btn btn-primary" type="submit" value="Calculate">
-			<br /><br />
-		</div>
-		<p class="morgCalc_Results"> Monthly payment: $ {{monthlyPayment}} </p>
-		<p class="morgCalc_Error"> {{morgCalc_Error}} </p>
-	</form>
-	
-</div>
-<br />
-<div class="home_agents">
-	<div class="agent-img">
-		<img src="{{agent.imageUrl}}" alt="{{agent.name}}" style="width:72px;height:92px">
+			<p class="morgCalc_Results"> Monthly payment: $ {{monthlyPayment}} </p>
+			<div class="error_text morgCalc_Error"> {{morgCalc_Error}} &nbsp;</div>
+		</form>
 	</div>
-	<div class="agent-contact">
-		<div class="agent_name">{{agent.name}}</div>
-		<p>Bus: &nbsp;{{agent.businessPhone}} <br />
-		Cell: &nbsp;{{agent.cellPhone}}<br />
-		Email: &nbsp;{{agent.email}}</p>
+	<br />
+	<div class="home_agents">
+		<div class="agent-img">
+			<img src="{{agent.imageUrl}}" alt="{{agent.name}}" style="width:72px;height:92px">
+		</div>
+		<div class="agent-contact">
+			<div class="agent_name">{{agent.name}}</div>
+			<p>Bus: &nbsp;{{agent.businessPhone}} <br />
+			Cell: &nbsp;{{agent.cellPhone}}<br />
+			Email: &nbsp;{{agent.email}}</p>
+		</div>
 	</div>
-</div>
 </div>

@@ -1,6 +1,35 @@
 /*********************************************************************************************************
+  Element Controls
+/*********************************************************************************************************/
+
+body {
+  font-family: Roboto, 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+/*********************************************************************************************************
+  Common Controls
+/*********************************************************************************************************/
+
+.jumbotron {
+  padding: 30px;
+  margin-bottom: 30px;
+  /*background-color: inherit;*/
+  
+}
+
+.container .jumbotron {
+  border-radius: 6px;
+  /*height: 635px;*/
+  display: inline-block;
+}
+
+
+
+
+/*********************************************************************************************************
   index
 /*********************************************************************************************************/
+
 
 
 
@@ -110,15 +139,27 @@ body {
 }*/
 
 .home_about {
-  background-color: #37499F;
+  /*background-color: #37499F;*/
+  color: #37499F;
+  background: -webkit-linear-gradient(rgba(255, 255, 255, 0.75), rgba(255, 255, 255, 0.2)); 
+  background: -o-linear-gradient(rgba(255, 255, 255, 0.75), rgba(255, 255, 255, 0.2));
+  background: -moz-linear-gradient(rgba(255, 255, 255, 0.75), rgba(255, 255, 255, 0.2));
+  background: linear-gradient(rgba(255, 255, 255, 0.75), rgba(255, 255, 255, 0.2));
+  height: 100%;
 }
 
 .home_leftpanel {
   display:inline-block;
   float:left;
   width:55%;
-  /*margin: 5px;*/
-  /*margin-left: 150px;*/
+  height: 650px;
+}
+
+.bg_gradient {
+  background: -webkit-linear-gradient(rgba(255, 255, 255, 0.75), rgba(255, 255, 255, 0.2)); 
+  background: -o-linear-gradient(rgba(255, 255, 255, 0.75), rgba(255, 255, 255, 0.2));
+  background: -moz-linear-gradient(rgba(255, 255, 255, 0.75), rgba(255, 255, 255, 0.2));
+  background: linear-gradient(rgba(255, 255, 255, 0.75), rgba(255, 255, 255, 0.2));
 }
 
 .home_intro_text {
@@ -126,27 +167,35 @@ body {
   font-family: Roboto, 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 
+.home_mls_logo {
+  width:150px;
+  height:80px;
+  position: absolute;
+  bottom: 10px;
+}
+
 .home_agents {
   padding: 6px;
   display: inline-block;
   background-color: #37499F;
-  width:100%;
+  width:39%;
   color: #FFF;
   font-size: 14px;
   border-radius: 4px;
   font-weight: 500;
   font-family: Roboto, 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  position: absolute;
+  bottom: 0px;
 }
 
 .home_rightpanel {
-  display:inline-block;
+  display:block;
   float:right;
   width:40%;
-  /*margin: 5px;*/
+  height: 650px;
 }
 
 .morgCalc_title {
-  /*color:#000;*/
   font-size: 20px;
   font-weight: 500;
   font-family: Roboto, 'Helvetica Neue', Helvetica, Arial, sans-serif;
@@ -154,7 +203,6 @@ body {
 
 .btn_morg {
   display:inline-block;
-  /*padding:2px 10px;*/
   width:100%;
 }
 
@@ -165,11 +213,12 @@ body {
 
 .morgCalc {
 	display:block;
-  /*color:#000;*/
+  width: 100%;
   font-size: 16px;
   font-weight: 500;
   background-color: #37499F;
   font-family: Roboto, 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  color: #FFF;
 }
 
 .morgCalc_Left {
@@ -199,9 +248,7 @@ body {
 }
 
 .morgCalc_Error {
-	color: #F00;
-	font-size: 16px;
-  font-weight: 600;
+  text-align: left;
   font-family: Roboto, 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 
@@ -234,8 +281,14 @@ body {
   background-color: inherit;
 }
 
-/* line 4534 */
 
+.contact_map {
+  color: #FFF;
+  background-color: #2C77BB;
+  border: 1px solid #dfd7ca;
+  width: 70%;
+  float: left;
+}
 
 .mapView {
   color: #000;
@@ -248,6 +301,9 @@ body {
   border: 1px solid #dfd7ca;
   border-radius: 4px;
   width: 28%;
+  background-color: #37499F;
+  color: #FFF;
+  float: right;
 }
 
 .contact_right input {
@@ -323,9 +379,7 @@ body {
   font-size: 16px;
 }
 
-.agent-contact1 {
-  display:inline-block;
-  float:right;
+.agent_contact {
   margin: 5px;
   width: 350px;
   border-width: 0px;
@@ -333,10 +387,17 @@ body {
 
 .agent_header {
 	margin-left: auto;
-  	margin-right: auto;
-  	width: 800px;
-	color: #FFF;
+  margin-right: auto;
+  padding: 30px;
+  border-radius: 6px;
+  display: block;
+  width: 800px;
+	color: #000;
 	font-size: 14px;
+  background: -webkit-linear-gradient(rgba(255, 255, 255, 0.75), rgba(255, 255, 255, 0.2)); 
+  background: -o-linear-gradient(rgba(255, 255, 255, 0.75), rgba(255, 255, 255, 0.2));
+  background: -moz-linear-gradient(rgba(255, 255, 255, 0.75), rgba(255, 255, 255, 0.2));
+  background: linear-gradient(rgba(255, 255, 255, 0.75), rgba(255, 255, 255, 0.2));
 }
 
 
@@ -347,6 +408,7 @@ body {
 .listing_table_frame {
 	width: 100%;
 	height: 720px;
+  background-color: #FFF;
 }
 
 /*********************************************************************************************************
@@ -372,6 +434,12 @@ body {
   font-size: 12pt;
 }
 
+.town_header {
+  color:#FFF;
+  font-size: 14pt;
+  margin-bottom: 20px;
+}
+
 .town_link {
   list-style:none;
   font-size: 18pt;
@@ -389,7 +457,8 @@ body {
   color:#FFF;
 }
 .jumbotron .town_bubble {
-height: 600px;
+
+  height: 600px;
 }
 
 .container .town_bubble {
@@ -405,64 +474,17 @@ height: 600px;
 
 
 
-/*********************************************************************************************************
-  Contact Page
-/*********************************************************************************************************/
 
 
 
 
-
-
-/*********************************************************************************************************
-  Common Controls
-/*********************************************************************************************************/
-
-.jumbotron {
-  padding: 30px;
-  margin-bottom: 30px;
-  color: #FFF;
-  /*background-color: inherit;*/
-  
+.error_text {
+  color: #F00;
+  font-size: 18px;
+  font-weight: 600;
 }
 
-.container .jumbotron {
-  border-radius: 6px;
-  /*height: 635px;*/
-  display: inline-block;
-}
 
-.jumbotronLeft {
-  padding: 30px;
-  margin-bottom: 30px;
-  color: #FFF;
-  background-color: #2C77BB;
-  
-}
-
-.container .jumbotronLeft {
-  border-radius: 6px;
-  /*width: 70%;*/
-  height: 635px;
-  display: inline-block;
-  float: left;
-}
-
-.jumbotronRight {
-  padding: 15px 20px;
-  margin-bottom: 30px;
-  color: #FFF;
-  background-color: #37499F;
-  
-}
-
-.container .jumbotronRight {
-  border-radius: 6px;
-  /*width: 28%;*/
-  height: 635px;
-  display: inline-block;
-  float: right;
-}
 
 
 

@@ -14,19 +14,24 @@ function HomeController($scope, $http, $timeout) {
 	// $scope.price = 450000;
 	// $scope.downPayment = 0;
 
+	// if (2 === "asdfasf'adfasdf\" asdf")
+
 	$scope.calculatePayments = function() {
-		console.log('$scope.price: ' + $scope.price);
-		if ($scope.price == undefined) {
+		console.log('$scope.term: ' + $scope.term  + '::');
+		if ($scope.price == undefined || $scope.price == '') {
 			$scope.morgCalc_Error = 'Please input a price';
 			$scope.monthlyPayment = '';
-		} else if ($scope.downPayment == undefined) {
+		} else if ($scope.downPayment == undefined || $scope.downPayment == '') {
 			$scope.morgCalc_Error = 'Please input a downPayment';
 			$scope.monthlyPayment = '';
-		} else if ($scope.rate == undefined) {
+		} else if ($scope.rate == undefined || $scope.rate == '') {
 			$scope.morgCalc_Error = 'Please input a rate';
 			$scope.monthlyPayment = '';
-		} else if ($scope.term == undefined) {
+		} else if ($scope.term == undefined || $scope.term == '') {
 			$scope.morgCalc_Error = 'Please input a term';
+			$scope.monthlyPayment = '';
+		} else if ($scope.price > $scope.downPayment) {
+			$scope.morgCalc_Error = 'Downpayment can not be greater then price';
 			$scope.monthlyPayment = '';
 		} else {
 			$scope.morgCalc_Error = '';
@@ -90,21 +95,20 @@ function HomeController($scope, $http, $timeout) {
 	});
 
 	$scope.counter = 0;
-    $scope.onTimeout = function(){
-    	if ($scope.counter  >= agentList.length - 1) {
-    		$scope.counter = 0;
-    	}
-    	else {
-        	$scope.counter++;
-        }
-        $scope.agent = agentList[$scope.counter];
-        mytimeout = $timeout($scope.onTimeout,10000);
-    }
-    var mytimeout = $timeout($scope.onTimeout,10000);
+	$scope.onTimeout = function() {
+		if ($scope.counter >= agentList.length - 1) {
+			$scope.counter = 0;
+		} else {
+			$scope.counter++;
+		}
+		$scope.agent = agentList[$scope.counter];
+		mytimeout = $timeout($scope.onTimeout, 10000);
+	}
+	var mytimeout = $timeout($scope.onTimeout, 10000);
 
-    $scope.stop = function(){
-        $timeout.cancel(mytimeout);
-    }
+	$scope.stop = function() {
+		$timeout.cancel(mytimeout);
+	}
 
 	// var updateAgent;
 	// updateAgent = $interval(function() {
@@ -131,7 +135,7 @@ function AgentController($scope, $http) {
 				$scope.agents.push(data[i]);
 			}
 		}
-		 
+
 	});
 
 	$http.get('data/agents_text.json').success(function(data) {
@@ -185,22 +189,26 @@ function ContactController($scope, $routeParams, $http) {
 		title: 'Discom Realty'
 	};
 
-	$scope.map_options = {scrollwheel: true};
+	$scope.map_options = {
+		scrollwheel: true
+	};
 
 	$scope.marker = {
-            id:0,
-            coords: {
-                latitude: 28.899626,
-                longitude: -81.285908
-            },
-            options: { draggable: true },
-            events: {
-                dragend: function (marker, eventName, args) {
-                    console.log('marker dragend');
-                }
-            }
-        }
- 
+		id: 0,
+		coords: {
+			latitude: 28.899626,
+			longitude: -81.285908
+		},
+		options: {
+			draggable: true
+		},
+		events: {
+			dragend: function(marker, eventName, args) {
+				console.log('marker dragend');
+			}
+		}
+	}
+
 
 	// $scope.marker = {
 	// 	id: 0,
