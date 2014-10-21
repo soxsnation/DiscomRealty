@@ -174,6 +174,13 @@ body {
   bottom: 10px;
 }
 
+.home_images {
+  padding: 6px;
+  display: inline-block;
+  position: absolute;
+  bottom: 100px;
+}
+
 .home_agents {
   padding: 6px;
   display: inline-block;

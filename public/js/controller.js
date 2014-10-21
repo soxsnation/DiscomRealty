@@ -17,7 +17,7 @@ function HomeController($scope, $http, $timeout) {
 	// if (2 === "asdfasf'adfasdf\" asdf")
 
 	$scope.calculatePayments = function() {
-		console.log('$scope.term: ' + $scope.term  + '::');
+		console.log('$scope.term: ' + $scope.term + '::');
 		if ($scope.price == undefined || $scope.price == '') {
 			$scope.morgCalc_Error = 'Please input a price';
 			$scope.monthlyPayment = '';
@@ -77,6 +77,9 @@ function HomeController($scope, $http, $timeout) {
 	$scope.currentPage = 'Home';
 	$http.get('data/home.json').success(function(data) {
 		$scope.intro = data.intro;
+		$scope.imagelist = data.images;
+		$scope.currentImage = 0;
+		$scope.currentImageUrl = $scope.imagelist[$scope.currentImage];
 	});
 
 	var agentList = [];
@@ -94,21 +97,46 @@ function HomeController($scope, $http, $timeout) {
 		$scope.agent = agentList[0];
 	});
 
+	
+
 	$scope.counter = 0;
 	$scope.onTimeout = function() {
+		console.log('onTimeout');
+		// update_images();
 		if ($scope.counter >= agentList.length - 1) {
 			$scope.counter = 0;
 		} else {
 			$scope.counter++;
 		}
 		$scope.agent = agentList[$scope.counter];
-		mytimeout = $timeout($scope.onTimeout, 10000);
+		mytimeout = $timeout($scope.onTimeout, 15000);
 	}
-	var mytimeout = $timeout($scope.onTimeout, 10000);
+	var mytimeout = $timeout($scope.onTimeout, 15000);
+	
 
 	$scope.stop = function() {
 		$timeout.cancel(mytimeout);
 	}
+
+	function update_images() {
+		$scope.currentImage ++;
+		if ($scope.currentImage >= $scope.imagelist.length) { $scope.currentImage = 0; }
+
+		$scope.currentImageUrl = $scope.imagelist[$scope.currentImage];		
+	}
+
+	$scope.onImageTimeout = function() {
+		console.log('onImageTimeout');
+		update_images();
+		myImgTimeout = $timeout($scope.onImageTimeout, 10000);
+	}
+
+	$scope.next_img = function() {
+		$timeout.cancel(myImgTimeout);
+		update_images();
+		myImgTimeout = $timeout($scope.onImageTimeout, 10000);
+	}
+	var myImgTimeout = $timeout($scope.onImageTimeout, 10000);
 
 	// var updateAgent;
 	// updateAgent = $interval(function() {
@@ -175,7 +203,23 @@ function ContactController($scope, $routeParams, $http) {
 		} else if ($scope.comments === '' || $scope.comments == undefined) {
 			$scope.error = 'Please tell us how we can help you';
 		} else {
-			alert('Sending Email from ' + $scope.firstname + ' ' + $scope.lastname);
+			
+
+			var emailObj = {
+				firstname: $scope.firstname,
+				lastname: $scope.lastname,
+				email: $scope.email,
+				phonenumber: $scope.phonenumber,
+				comments: $scope.comments
+			};
+
+			$http.post('/api/email', emailObj).success(function(data) {
+				alert('Email Sent from ' + $scope.firstname + ' ' + $scope.lastname);
+			}).error(function(err){
+				alert('ERROR:: Sending Email from ' + $scope.firstname + ' ' + $scope.lastname);
+			});
+
+
 		}
 
 	}

@@ -1,3 +1,10 @@
 {
-	"intro":"We're glad you're here! We have been serving West Volusia and Seminole counties since 1990 providing over 30 years of real estate experience. We pride ourselves on repeat business and referrals from satisfied clients. Come get to know us at Discom Realty and <i>discover</i> our <i>committment</i> to you, our newest neighbor!"
+	"intro":"We're glad you're here! We have been serving West Volusia and Seminole counties since 1990 providing over 30 years of real estate experience. We pride ourselves on repeat business and referrals from satisfied clients. Come get to know us at Discom Realty and <i>discover</i> our <i>committment</i> to you, our newest neighbor!",
+	"images": [
+	"img/home/home_sanford.jpg",
+	"img/home/home_sanford2.jpg",
+	"img/home/home_manatees.jpg",
+	"img/home/home_gator.jpg",
+	"img/home/home_lake_monroe_bridge.jpg"
+	]
 }
